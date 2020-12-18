@@ -9,6 +9,6 @@
         }
     },
     "website": "https://www.x-potato.com",
-    "repository": "https://github.com/yxhit/v2ray-heroku",
+    "repository": "https://github.com/yxhit/Xray-Heroku",
     "stack": "container"
 }
