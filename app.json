@@ -1,0 +1,14 @@
+{
+    "name": "V2Ray",
+    "description": "Deploy V2ray on Heroku.",
+    "keywords": ["V2Ray"],
+    "env": {
+        "UUID": {
+            "description": "V2Ray UUID",
+            "value": "7901563d-d07c-45da-85b7-707bc3d9377f"
+        }
+    },
+    "website": "https://www.x-potato.com",
+    "repository": "https://github.com/yxhit/v2ray-heroku",
+    "stack": "container"
+}
