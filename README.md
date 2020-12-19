@@ -1,8 +1,8 @@
-# V2Ray Heroku
+# XRay Heroku
 
 ## 概述
 
-用于在 Heroku 上部署 V2Ray Websocket。
+用于在 Heroku 上部署 XRay Websocket。
 
 **Heroku 为我们提供了免费的容器服务，我们不应该滥用它，所以本项目不宜做为长期翻墙使用。**
 
@@ -28,6 +28,6 @@ WebSocket 路径为 `/`。
 
 `alterId` 为 `128`。
 
-V2Ray 将在部署时自动安装最新版本。
+XRay 将在部署时自动安装最新版本。
 
 **出于安全考量，除非使用 CDN，否则请不要使用自定义域名，而使用 Heroku 分配的二级域名，以实现 V2Ray Websocket + TLS。**
