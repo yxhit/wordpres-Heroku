@@ -1,10 +1,10 @@
 {
-    "name": "V2Ray",
-    "description": "Deploy V2ray on Heroku.",
-    "keywords": ["V2Ray"],
+    "name": "XRay",
+    "description": "Deploy Xray on Heroku.",
+    "keywords": ["XRay"],
     "env": {
         "UUID": {
-            "description": "V2Ray UUID",
+            "description": "XRay UUID",
             "value": "7901563d-d07c-45da-85b7-707bc3d9377f"
         }
     },
