@@ -2,7 +2,7 @@
 
 # Download and install V2Ray
 mkdir /tmp/xray
-curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/download/latest/Xray-linux-64.zip
+curl -L -H "Cache-Control: no-cache" -o /tmp/xray/xray.zip https://github.com/XTLS/Xray-core/releases/download/1.1.4/Xray-linux-64.zip
 unzip /tmp/xray/xray.zip -d /tmp/xray
 install -m 755 /tmp/xray/xray /usr/local/bin/xray
 install -m 755 /tmp/xray/xctl /usr/local/bin/xctl
@@ -22,13 +22,13 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "clients": [
                     {
                         "id": "$UUID",
-                        "leveo": 128
+                        "level": 0
                     }
                 ],
                 "disableInsecureEncryption": true
             },
             "streamSettings": {
-                "network": "ws"
+                "network": "tcp"
             }
         }
     ],
