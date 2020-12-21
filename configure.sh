@@ -16,31 +16,21 @@ cat << EOF > /usr/local/etc/xray/config.json
 {
     "inbounds": [
       {
-      "port": $PORT,
-      "protocol": "vless",
-      "settings": {
-        "decryption": "none",
-        "clients": [
-          {
-            "id": "$UUID",
-            "level": 0
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "wsSettings": {
-        "path": "/xray"
+            "port": $PORT,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "$UUID",
+                        "leveo": 128
+                    }
+                ],
+                "disableInsecureEncryption": true
+            },
+            "streamSettings": {
+                "network": "ws"
+            }
         }
-      },
-      "sniffing": {
-              "enabled": true,
-              "destOverride":[
-                      "http",
-                      "tls"
-              ]
-      }
-    }
     ],
     "outbounds": [
         {
