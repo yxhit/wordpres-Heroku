@@ -1,18 +1,18 @@
 #!/bin/sh
 
 # Download and install V2Ray
-mkdir /tmp/v2ray
-curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/XTLS/Xray-core/releases/download/$RELEASE_VERSION/Xray-linux-$MACHINE.zip
-unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
-install -m 755 /tmp/v2ray/v2ray /usr/local/bin/v2ray
-install -m 755 /tmp/v2ray/v2ctl /usr/local/bin/v2ctl
+mkdir /tmp/Xray
+curl -L -H "Cache-Control: no-cache" -o /tmp/Xray/Xray.zip https://github.com/XTLS/Xray-core/releases/download/$RELEASE_VERSION/Xray-linux-$MACHINE.zip
+unzip /tmp/Xray/Xray.zip -d /tmp/Xray
+install -m 755 /tmp/Xray/Xray /usr/local/bin/Xray
+install -m 755 /tmp/Xray/Xctl /usr/local/bin/Xctl
 
 # Remove temporary directory
-rm -rf /tmp/v2ray
+rm -rf /tmp/Xray
 
-# V2Ray new configuration
-install -d /usr/local/etc/v2ray
-cat << EOF > /usr/local/etc/v2ray/config.json
+# XRay new configuration
+install -d /usr/local/etc/Xray
+cat << EOF > /usr/local/etc/Xray/config.json
 {
     "inbounds": [
         {
@@ -40,5 +40,5 @@ cat << EOF > /usr/local/etc/v2ray/config.json
 }
 EOF
 
-# Run V2Ray
-/usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json
+# Run XRay
+/usr/local/bin/Xray -config /usr/local/etc/Xray/config.json
