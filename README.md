@@ -25,10 +25,11 @@ XRay 将在部署时不会自动安装最新版本，目前是1.4.2版。
 ## 套用CDN
 在cloudflare里点击Workers，添加如下代码。
 
+```
 addEventListener(
     "fetch",event => {
          let url=new URL(event.request.url);
-              url.hostname="hnxzyy.herokuapp.com";
+              url.hostname="xxxx.herokuapp.com";
                    let request=new Request(url,event.request);
                         event. respondWith(
                                fetch(request)
@@ -36,3 +37,4 @@ addEventListener(
                                       }
                             
 )
+```
