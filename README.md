@@ -21,3 +21,18 @@
 XRay 将在部署时不会自动安装最新版本，目前是1.4.2版。
 
 **出于安全考量，除非使用 CDN，否则请不要使用自定义域名，而使用 Heroku 分配的二级域名，以实现 XRay Websocket + TLS。**
+
+##套用CDN
+在cloudflare里点击Workers，添加如下代码。
+
+addEventListener(
+    "fetch",event => {
+         let url=new URL(event.request.url);
+              url.hostname="hnxzyy.herokuapp.com";
+                   let request=new Request(url,event.request);
+                        event. respondWith(
+                               fetch(request)
+                                    )
+                                      }
+                            
+)
